@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 
+
 export const Header = () => {
-// navbar
+    // navbar
     return (
         <>
-            <div className="navbar bg-gray-300">
+            <div className="navbar bg-gray-300 ">
                 <div className="flex-1">
                     <Link to='/' className="btn btn-ghost text-xl">Abhi</Link>
                 </div>
@@ -16,9 +17,9 @@ export const Header = () => {
                                 <summary>
                                     Nutanix Solution
                                 </summary>
-                                <ul className="p-2 bg-base-100 rounded-t-none">
-                                    <li><NavLink to='/' className={({isActive})=>`${isActive ? "text-blue-500" : ""}`}>CAPEX</NavLink></li>
-                                    <li><NavLink>OPEX</NavLink></li>
+                                <ul className="p-2 bg-base-100 rounded-t-none absolute z-50">
+                                    <li><NavLink to='/NsCapex' className={({ isActive }) => `${isActive ? "text-blue-500" : ""}`}>CAPEX</NavLink></li>
+                                    <li><NavLink to='/NsOpex' className={({ isActive }) => `${isActive ? "text-blue-500" : ""}`} >OPEX</NavLink></li>
                                 </ul>
                             </details>
                         </li>
@@ -27,9 +28,9 @@ export const Header = () => {
                                 <summary>
                                     Discrete Solution
                                 </summary>
-                                <ul className="p-2 bg-base-100 rounded-t-none">
-                                    <li><NavLink>CAPEX</NavLink></li>
-                                    <li><NavLink>OPEX</NavLink></li>
+                                <ul className="p-2 bg-base-100 rounded-t-none absolute z-50">
+                                    <li><NavLink to='/DsCapex' className={({ isActive }) => `${isActive ? "text-blue-500" : ""}`} >CAPEX</NavLink></li>
+                                    <li><NavLink to='/DsOpex' className={({ isActive }) => `${isActive ? "text-blue-500" : ""}`} >OPEX</NavLink></li>
                                 </ul>
                             </details>
                         </li>
@@ -38,7 +39,7 @@ export const Header = () => {
                                 <summary>
                                     Account
                                 </summary>
-                                <ul className="p-2 bg-base-100 rounded-t-none">
+                                <ul className="p-2 bg-base-100 rounded-t-none absolute z-50">
                                     <li><NavLink>Logout</NavLink></li>
                                 </ul>
                             </details>
